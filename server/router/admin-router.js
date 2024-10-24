@@ -1,0 +1,90 @@
+const express = require('express');
+const adminController = require('../controllers/admin-controller.js');
+const authMiddleware = require("../middlewares/auth-middleware.js"); 
+
+const router = express.Router();
+
+router.route('/filtercontactedusersbydate').post(adminController.filterContactedUsersByDate);
+router.route('/filterregisteredusersbydate').post(adminController.filterRegisteredUsersByDate);
+router.route('/filterbrandbydate').post(adminController.filterBrandByDate);
+router.route('/filterscalebydate').post(adminController.filterScaleByDate);
+router.route('/filtercategorybydate').post(adminController.filterCategoryByDate);
+router.route('/filtersubcategorybydate').post(adminController.filterSubCategoryByDate);
+router.route('/filtercategoryimagesliderbydate').post(adminController.filterCategoryImageSliderByDate);
+router.route('/filtersubcategoryimagesliderbydate').post(adminController.filterSubCategoryImageSliderByDate);
+router.route('/filterchildcategorybydate').post(adminController.filterChildCategoryByDate);
+router.route('/filtersubchildcategorybydate').post(adminController.filterSubChildCategoryByDate);
+router.route('/singleproductimage').post(adminController.uploadSingleImage);
+router.route('/multipleproductimage').post(adminController.uploadMultipleImage);
+router.route('/getadmindetails/:id').get(adminController.getAdminDetails);
+router.route('/getsinglecontacteduser/:id').get(adminController.getSingleContactedUser);
+router.route('/getsingleuser/:id').get(adminController.getSingleUser);
+router.route('/getsinglebrand/:id').get(adminController.getSingleBrand);
+router.route('/getsinglescale/:id').get(adminController.getSingleScale);
+router.route('/getsinglecategory/:id').get(adminController.getSingleCategory);
+router.route('/getsinglesubcategory/:id').get(adminController.getSingleSubCategory);
+router.route('/getsinglecategoryimageslider/:id').get(adminController.getSingleCategoryImageSlider);
+router.route('/getsinglesubcategoryimageslider/:id').get(adminController.getSingleSubCategoryImageSlider);
+router.route('/getsinglechildcategory/:id').get(adminController.getSingleChildCategory);
+router.route('/getsinglesubchildcategory/:id').get(adminController.getSingleSubChildCategory);
+router.route('/getmultiimages/:id').get(adminController.getMultiImages);
+router.route('/getmultisizes/:id').get(adminController.getMultiSizes);
+router.route('/getmulticolors/:id').get(adminController.getMultiColors);
+router.route('/getmultioffers/:id').get(adminController.getMultiOffers);
+router.route('/getedituser/:id').patch(adminController.getUpdateUser);  //to update we will use patch
+router.route('/geteditsubadmin/:id').patch(adminController.getUpdateSubadmin); 
+router.route('/geteditbrand/:id').patch(adminController.getUpdateBrand);
+router.route('/geteditscale/:id').patch(adminController.getUpdateScale);
+router.route('/geteditcategory/:id').patch(adminController.getUpdateCategory);
+router.route('/geteditsubcategory/:id').patch(adminController.getUpdateSubCategory);
+router.route('/geteditcategoryimageslider/:id').patch(adminController.getUpdateCategoryImageSlider);
+router.route('/geteditsubcategoryimageslider/:id').patch(adminController.getUpdateSubCategoryImageSlider);
+router.route('/geteditchildcategory/:id').patch(adminController.getUpdateChildCategory);
+router.route('/geteditsubchildcategory/:id').patch(adminController.getUpdateSubChildCategory);
+router.route('/geteditadminpassword/:id').patch(adminController.getUpdateAdminPassword);  //to update we will use patch
+router.route('/geteditadminprofile/:id').patch(adminController.getUpdateAdminProfile);
+router.route('/deletecontactrecord/:id').delete(adminController.getDeleteContactedUser);
+router.route('/deleterecord/:id').delete(adminController.getDeleteUser);
+router.route('/deletesubadmin/:id').delete(adminController.getDeleteSubAdmin);
+router.route('/deletebrand/:id').delete(adminController.getDeleteBrand);
+router.route('/deletescale/:id').delete(adminController.getDeleteScale);
+router.route('/deletecategory/:id').delete(adminController.getDeleteCategory);
+router.route('/deletesubcategory/:id').delete(adminController.getDeleteSubCategory);
+router.route('/deletecategoryimageslider/:id').delete(adminController.getDeleteCategoryImageSlider);
+router.route('/deletesubcategoryimageslider/:id').delete(adminController.getDeleteSubCategoryImageSlider);
+router.route('/deletechildcategory/:id').delete(adminController.getDeleteChildCategory);
+router.route('/deletesubchildcategory/:id').delete(adminController.getDeleteSubChildCategory);
+router.route('/deletemultiimage/:id').delete(adminController.getDeleteMultiImage);
+router.route('/deleteproductsize/:id').delete(adminController.getDeleteProductSize);
+router.route('/deleteproductcolor/:id').delete(adminController.getDeleteProductColor);
+router.route('/deleteproductoffer/:id').delete(adminController.getDeleteProductOffer);
+router.route('/contectedusers').get(adminController.getAllContectedusers); 
+//router.route('/countsubcategory').post(adminController.getCountSubcategory);
+router.route('/createsubadmin').post(adminController.createSubAdmin);
+router.route('/createbrand').post(adminController.createBrand);
+router.route('/createscale').post(adminController.createScale);
+router.route('/createcategory').post(adminController.createCategory);
+router.route('/createsubcategory').post(adminController.createSubCategory);
+router.route('/createcategoryimageslider').post(adminController.createCategoryImageSlider);
+router.route('/createsubcategoryimageslider').post(adminController.createSubCategoryImageSlider);
+router.route('/createchildcategory').post(adminController.createChildCategory);
+router.route('/createsubchildcategory').post(adminController.createSubChildCategory);
+//router.route('/getadmindata').get(adminController.getAdminData);
+router.route('/getallbrand').get(adminController.getAllBrand);
+router.route('/getallscale').get(adminController.getAllScale);
+router.route('/getallbrandaccordingstatus').get(adminController.getAllBrandAccordingStatus);
+router.route('/getallscaleaccordingstatus').get(adminController.getAllScaleAccordingStatus);
+router.route('/getallcategory').get(adminController.getAllCategory);
+router.route('/getallcategoryaccordingstatus').get(adminController.getAllCategoryAccordingStatus);
+router.route('/getallsubcategory').get(adminController.getAllSubCategory);
+router.route('/getallcategoryimageslider').get(adminController.getAllCategoryImageSlider);
+router.route('/getallsubcategoryimageslider').get(adminController.getAllSubCategoryImageSlider);
+router.route('/getallsubcategorybycategoryid/:id').get(adminController.getAllSubCategoryByCategoryid);
+router.route('/getallchildcategorybysubcategoryid/:id').get(adminController.getAllChildCategoryBySubCategoryid);//
+router.route('/getallchildcategory').get(adminController.getAllChildCategory);
+router.route('/getallsubchildcategory').get(adminController.getAllSubChildCategory);
+router.route('/registeredusers').get(adminController.getAllRegisteredusers);    //press ctrl + space for auto suggestion
+router.route('/subadminlist').get(adminController.getAllSubAdminList); 
+
+
+module.exports = router;
