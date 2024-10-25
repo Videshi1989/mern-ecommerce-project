@@ -45,58 +45,81 @@ const AdminChangepassword = () => {
 	 
 		const handleSubmitAdminChangePassword = async (e) =>{      //calling on submit
 			e.preventDefault();       //to stop page refresh
-			setLoader(true);
-			setpopupwait(true);
-			//console.log("useradmineditdata",editadmindata);
-				
-			try
+
+			if(editadmindata.oldpassword === '' || editadmindata.oldpassword === null || editadmindata.oldpassword === undefined)
 			{
-			  const response = await fetch(`${ADMINAPI}/geteditadminpassword/${user._id}`,{
-				  method:"PATCH",
-				  headers:{
-					  'Content-Type': 'application/json',
-					  Authorization : authorizationToken 
-	
-				  },
-				  body:JSON.stringify(editadmindata)
-			  });
-	
-			  const res_data = await response.json();
-			 // console.log("response data",res_data);
-	
-			  if(response.ok)
-			  { 
-				Seteditadmindata({ 
-					oldpassword:"",
-					newpassword:"",
-					confirmnewpassword:""
+				toast.error("Please enter old password !");
+				return;
+			}
+			else if(editadmindata.newpassword === '' || editadmindata.newpassword === null || editadmindata.newpassword === undefined)
+			{
+				toast.error("Please enter new password !");
+				return;
+			}
+			else if(editadmindata.confirmnewpassword === '' || editadmindata.confirmnewpassword === null || editadmindata.confirmnewpassword === undefined)
+			{
+				toast.error("Please enter confirm new password !");
+				return;
+			}
+			else if(editadmindata.newpassword !== editadmindata.confirmnewpassword)
+			{
+				toast.error("New password and confirm new password did not match !");
+				return;
+			}
+			else
+			{
+				setLoader(true);
+				setpopupwait(true);
+				try
+				{
+				  const response = await fetch(`${ADMINAPI}/geteditadminpassword/${user._id}`,{
+					  method:"PATCH",
+					  headers:{
+						  'Content-Type': 'application/json',
+						  Authorization : authorizationToken 
+		
+					  },
+					  body:JSON.stringify(editadmindata)
 				  });
-				//toast.success(res_data.msg);
-				setLoader(false);
-				setpopupsuccess(true);
-				setresponseheading(process.env.REACT_APP_SUCCESS_HEADING_UPDATE);
-				setresponsemsg(res_data.msg);
-				setpopupwait(false);
-				//navigate("/admindashboard");
+		
+				  const res_data = await response.json();
+				 // console.log("response data",res_data);
+		
+				  if(response.ok)
+				  { 
+					Seteditadmindata({ 
+						oldpassword:"",
+						newpassword:"",
+						confirmnewpassword:""
+					  });
+					//toast.success(res_data.msg);
+					setLoader(false);
+					setpopupsuccess(true);
+					setresponseheading(process.env.REACT_APP_SUCCESS_HEADING_UPDATE);
+					setresponsemsg(res_data.msg);
+					setpopupwait(false);
+					//navigate("/admindashboard");
+				  }
+				  else
+				  {
+					toast.error(res_data.msg);
+					setLoader(false);
+					setpopupwait(false);
+				  }
+				
 			  }
-			  else
+			  catch(error)
 			  {
-				toast.error(res_data.msg);
+				//console.log("update-error",error)
+				//toast.error(error);
+				setpopuperror(true);
+				setresponseheading(process.env.REACT_APP_ERROR_HEADING);
+				setresponsemsg(process.env.REACT_APP_ERROR_MESSAGE);
 				setLoader(false);
 				setpopupwait(false);
 			  }
-			
-		  }
-		  catch(error)
-		  {
-			//console.log("update-error",error)
-			//toast.error(error);
-			setpopuperror(true);
-			setresponseheading(process.env.REACT_APP_ERROR_HEADING);
-			setresponsemsg(process.env.REACT_APP_ERROR_MESSAGE);
-			setLoader(false);
-			setpopupwait(false);
-		  }
+			}
+	
 	
 		}
 
