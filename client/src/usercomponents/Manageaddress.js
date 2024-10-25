@@ -238,7 +238,7 @@ export const Manageaddress = () => {
 		<div className="row mt-2">
 			<div className="col">
                 <div className='text-center'>
-                    <img src={exclamation} style={{width:'125px'}}/>
+                    <img src={exclamation} style={{width:'125px'}} alt="imgage" />
                     <div className="view-delete-heading-user">Delete Address ?</div>
                     <span className="delete-review">Really want to delete this Address ?</span>
                 </div>

@@ -123,7 +123,7 @@ export default function Contact()
 <div id="popupsuccess" className="overlayadmin" style={{ display: `${popupsuccess === true ? 'block' : 'none'}` }}>
   <div className="popupdelete animate-zoom" style={{top:'30%'}}>
   <div className='text-center'>
-	<img loading='lazy' src={success} style={{width:'115px'}} />
+	<img loading='lazy' src={success} style={{width:'115px'}} alt="image" />
   </div>
     <div className="view-success-heading text-center">{responseheading}</div>
     
@@ -154,7 +154,7 @@ export default function Contact()
 		<div id="popuperror" className="overlayadmin" style={{ display: `${popuperror === true ? 'block' : 'none'}` }}>
   <div className="popupdelete animate-zoom" style={{top:'30%'}}>
   <div className='text-center'>
-	<img loading='lazy' src={error} style={{width:'115px'}} />
+	<img loading='lazy' src={error} style={{width:'115px'}} alt="image" />
   </div>
     <div className="view-error-heading text-center">{responseheading}</div>
     

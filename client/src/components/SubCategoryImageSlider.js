@@ -11,7 +11,7 @@ import img4 from './Images/img4.jpg'
 import img5 from './Images/img5.jpg'
 import img6 from './Images/img6.jpg'
 
-export default function Secondslider()
+export default function SubcategoryImageSlider()
 {
     const[records,setRecords] = useState([]);
     
@@ -91,7 +91,7 @@ export default function Secondslider()
                         records.length > 0 ?
 						records.map((data,index) => 
                      
-                            <SwiperSlide><Link key={index} to={`/allproductview2/${data.subcategoryid}`}>{data.imagename ? <img loading='lazy'  alt="img" src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} className='sliderimg'/> : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} className='sliderimg' />}</Link></SwiperSlide>
+                            <SwiperSlide key={index}><Link  to={`/allproductview2/${data.subcategoryid}`}>{data.imagename ? <img loading='lazy'  alt="img" src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} className='sliderimg'/> : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} className='sliderimg' alt="imgage" />}</Link></SwiperSlide>
                             
                         ) : <div className="nosubcatslidermsg">Sorry! No subcategory slider available.</div>
                    

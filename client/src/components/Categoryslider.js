@@ -186,22 +186,22 @@ export default function Categoryslider()
 <div className="title"><strong>{categoryname}</strong></div>
       <div className='subcatheight' id='subcat-scroll'>
         <ul className="sub-category-tabs">
-            {/* <li><Link to="/allproductview1"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Refrizrator</Link></li>
+            {/* <li><Link to="/allproductview1"><i className="fa fa-angle-double-right" aria-hidden="true"></i> Refrizrator</Link></li>
             <li><hr /></li>
-            <li><Link to="/allproductview2"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Cooler</Link></li>
+            <li><Link to="/allproductview2"><i className="fa fa-angle-double-right" aria-hidden="true"></i> Cooler</Link></li>
             <li><hr /></li>
-            <li><Link to="/allproductview1"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Table Fan</Link></li>
+            <li><Link to="/allproductview1"><i className="fa fa-angle-double-right" aria-hidden="true"></i> Table Fan</Link></li>
             <li><hr /></li>
-            <li><Link to="/allproductview1"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Celling Fan</Link></li>
+            <li><Link to="/allproductview1"><i className="fa fa-angle-double-right" aria-hidden="true"></i> Celling Fan</Link></li>
             <li><hr /></li>
-            <li><Link to="/allproductview1"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Mixer</Link></li>
+            <li><Link to="/allproductview1"><i className="fa fa-angle-double-right" aria-hidden="true"></i> Mixer</Link></li>
             <li><hr /></li>
-            <li><Link to="/allproductview1"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Iron</Link></li> */}
+            <li><Link to="/allproductview1"><i className="fa fa-angle-double-right" aria-hidden="true"></i> Iron</Link></li> */}
 
              {
                getallsubcategory.length > 0 ?
 						getallsubcategory.map((data,index) => 
-                        <li key={index}><span><Link to={`/allproductview2/${data._id}`}><i class="fa fa-angle-double-right" aria-hidden="true"></i> {data.subcategoryname}</Link></span></li>
+                        <li key={index}><span><Link to={`/allproductview2/${data._id}`}><i className="fa fa-angle-double-right" aria-hidden="true"></i> {data.subcategoryname}</Link></span></li>
                         
                         ) : 'Sorry! No subcategory available.'
 				} 
@@ -246,7 +246,7 @@ export default function Categoryslider()
                                              {
                                                 data.imagename.length > 0 ?
                                                 <img loading='lazy' title={data.categoryname}  src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} alt={data.categoryname} />
-                                                : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'50px'}} />
+                                                : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'50px'}} alt="image" />
                                              }
                                              
                                              </div>
@@ -261,7 +261,7 @@ export default function Categoryslider()
                                              {
                                                 data.imagename.length > 0 ?
                                                 <img loading='lazy' title={data.categoryname}  src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} alt={data.categoryname} />
-                                                : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'50px'}} />
+                                                : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'50px'}} alt="image" />
                                              }
                                        </div>
                                        <span>{data.categoryname} </span>

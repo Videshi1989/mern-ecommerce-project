@@ -72,7 +72,7 @@ export const Orderdetails = () => {
 		<div className="row mt-2">
 			<div className="col">
       <div className='text-center'>
-                    <img src={exclamation} style={{width:'125px'}}/>
+                    <img src={exclamation} style={{width:'125px'}} alt="imgage" />
                     <div className="view-delete-heading-user">Cancel Order ?</div>
                     <span className="delete-review">Really want to cancel this order ?</span>
                 </div>
@@ -159,7 +159,7 @@ export const Orderdetails = () => {
 		<div className="row mt-2">
 			<div className="col">
       <div className='text-center'>
-                    <img src={exclamation} style={{width:'125px'}}/>
+                    <img src={exclamation} style={{width:'125px'}} alt="imgage" />
                     <div className="view-delete-heading-user">Return Product ?</div>
                     <span className="delete-review">Really want to return this order ?</span>
                 </div>

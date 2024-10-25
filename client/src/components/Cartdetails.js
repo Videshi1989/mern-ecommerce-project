@@ -47,7 +47,7 @@ export default function Cartdetails()
 		<div className="row mt-2">
 			<div className="col">
             <div className='text-center'>
-                    <img src={exclamation} style={{width:'125px'}}/>
+                    <img src={exclamation} style={{width:'125px'}} alt="image"/>
                     <div className="view-delete-heading-user">Remove Item ?</div>
                     <span className="remove-heading">Really want to remove this item ?</span>
                 </div>

@@ -70,7 +70,7 @@ export default function CategoryImageSlider()
                     records.length > 0 ?
 						records.map((data,index) => 
                      
-                            <SwiperSlide><Link key={index} to={`/allproductview2/${data.categoryid}`}>{data.imagename ? <img loading='lazy'  alt="img" src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} className='topimg' /> : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} className='topimg' />}</Link></SwiperSlide>
+                            <SwiperSlide key={index}><Link  to={`/allproductview2/${data.categoryid}`}>{data.imagename ? <img loading='lazy'  alt="img" src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} className='topimg' /> : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} className='topimg' alt="image" />}</Link></SwiperSlide>
                             
                         ) : <div className="nocatslidermsg">Sorry! No category slider available.</div>
                    

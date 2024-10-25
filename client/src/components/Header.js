@@ -444,7 +444,7 @@ const handleSubmitSignin = async (e) =>{      //calling on submit
   </div>
  
  
-   <button type="button" className="btn outerdbtn w-100 mb-3">Submit <i class="fa fa-arrow-up" aria-hidden="true"></i></button><br/>
+   <button type="button" className="btn outerdbtn w-100 mb-3">Submit <i className="fa fa-arrow-up" aria-hidden="true"></i></button><br/>
    <span title="Go to login" className="fgtpwd" onClick={ShowSignIn} >Sign in</span>
 
 </form>
@@ -520,7 +520,7 @@ const handleSubmitSignin = async (e) =>{      //calling on submit
     loader ?  
     <button type="button" className="btn outerdbtn w-100 mb-2"><span>please wait... <img src={loaderouter} className="loadersize" alt="loader"/></span> </button> 
     : 
-    <button type="sumit" className="btn outerdbtn w-100 mb-2"><span>Sign up <i class="fa fa-sign-in" aria-hidden="true"></i></span></button>
+    <button type="sumit" className="btn outerdbtn w-100 mb-2"><span>Sign up <i className="fa fa-sign-in" aria-hidden="true"></i></span></button>
   }
   
    <span onClick={ShowSignIn}  title="Go to login" className="fgtpwd" >Already have an account? Sign in</span>
