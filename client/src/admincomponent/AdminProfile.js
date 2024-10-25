@@ -253,14 +253,14 @@ const AdminProfile = () => {
 								<div className="col-10 mobwidth100flxunsetadmin">
 									<input onChange={(e)=>{ setdisplaypreviewimg(false); setImg(e.target.files[0]); setpreviewimg(URL.createObjectURL(e.target.files[0])); }} type="file" accept="image/png,image/jpg,image/jpeg,image/svg+xml,image/gif" name="file" id="file" className="form-control changepic" />
 									<div className='mt-2' style={{ display: `${displaypreviewimg === true ? 'block' : 'none'}` }}>
-										{ admindata.imagename ?  <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${admindata.imagename}`} style={{width:'150px'}} alt="image" /> 
+										{ admindata.imagename ?  <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${admindata.imagename}`} style={{width:'150px'}} alt="img" /> 
 											: 
 											<img loading='lazy' alt='img' src={admin} className='adminimgchange' />
 										} 
 									</div>
 									
 									<div className='mt-2' style={{ display: `${displaypreviewimg === false ? 'block' : 'none'}` }}>
-										{ previewimg ?  <img src={previewimg} style={{width:'150px'}} alt="image" /> : '' }
+										{ previewimg ?  <img src={previewimg} style={{width:'150px'}} alt="img" /> : '' }
 									</div>
 								</div>
 							</div>
@@ -289,7 +289,7 @@ const AdminProfile = () => {
   <div className="popupwait animate-zoom">
     <div className="text-center">
 	
-	<img src={loadergif} style={{width:'50px'}} alt="image" />
+	<img src={loadergif} style={{width:'50px'}} alt="img" />
 	</div>
    
   
@@ -312,7 +312,7 @@ const AdminProfile = () => {
 	    <div id="popupsuccess" className="overlayadmin" style={{ display: `${popupsuccess === true ? 'block' : 'none'}` }}>
   <div className="popupdelete animate-zoom">
   <div className='text-center'>
-	<img src={success} style={{width:'115px'}} alt="image" />
+	<img src={success} style={{width:'115px'}} alt="img" />
   </div>
     <div className="view-success-heading text-center">{responseheading}</div>
     
@@ -343,7 +343,7 @@ const AdminProfile = () => {
 		<div id="popuperror" className="overlayadmin" style={{ display: `${popuperror === true ? 'block' : 'none'}` }}>
   <div className="popupdelete animate-zoom">
   <div className='text-center'>
-	<img src={error} style={{width:'115px'}} alt="image" />
+	<img src={error} style={{width:'115px'}} alt="img" />
   </div>
     <div className="view-error-heading text-center">{responseheading}</div>
     
@@ -451,7 +451,7 @@ const AdminProfile = () => {
 																			{/* <input type="file" disabled className="form-control f-cont-adminprof" /> */}
 																			<div className='mt-4'>
 																				{/* <img loading='lazy' alt='img' src={admin} className='adminimgchange' /> */}
-																				{user.imagename ? <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${user.imagename}`} style={{width:'100px'}} alt="image" /> : <img loading='lazy' alt='img' src={admin} className='adminimgchange' />}
+																				{user.imagename ? <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${user.imagename}`} style={{width:'100px'}} alt="img" /> : <img loading='lazy' alt='img' src={admin} className='adminimgchange' />}
 																			</div>
 
 																		</div>

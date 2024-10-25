@@ -2140,9 +2140,9 @@ async function ShowpopupEdit(getid)
 				{
 					multiimagedata.length > 0 ? 
 						multiimagedata.map((data,index) =>
-							<img key={index} src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} style={{width:'100px',height:'100px',marginRight:'5px',marginBottom:'5px'}} alt="image" />
+							<img key={index} src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} style={{width:'100px',height:'100px',marginRight:'5px',marginBottom:'5px'}} alt="img" />
   										
-						) : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'100px'}} alt="image" />
+						) : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'100px'}} alt="img" />
 				}
 				</span>
 				
@@ -3094,13 +3094,13 @@ async function ShowpopupEdit(getid)
 					multiimagedata.length > 0 ? 
 						multiimagedata.map((data,index) =>
 						<div key={index} style={{position: 'relative'}}>
-							<img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} style={{width:'100px',height:'100px',marginRight:'5px',marginBottom:'5px'}} alt="image" />
+							<img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} style={{width:'100px',height:'100px',marginRight:'5px',marginBottom:'5px'}} alt="img" />
 						<button type="button" onClick={() => DeleteMultiImage(data._id)} title='Remove' style={{ position: 'absolute',top: 0,right: 0,backgroundColor: 'red',color: 'white',border: 'none',borderRadius: '50%',cursor: 'pointer' }}>
                   						&times;
                 					</button>
 						</div>
   										
-						) : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'100px'}} alt="image" />
+						) : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'100px'}} alt="img" />
 				}
 				</div>
 			
@@ -3125,7 +3125,7 @@ async function ShowpopupEdit(getid)
 				</div>
 				<div>
 					{
-						noImgPreview === true ? <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'100px'}} alt="image" /> : ''
+						noImgPreview === true ? <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'100px'}} alt="img" /> : ''
 					}
 				</div>
 
@@ -3215,7 +3215,7 @@ async function ShowpopupEdit(getid)
 <div id="popupdelete" className="overlayadmin" style={{display:'none'}}>
   <div className="popupdelete animate-zoom">
   <div className='text-center'>
-	<img  src={exclamation} style={{width:'125px'}} alt="image" />
+	<img  src={exclamation} style={{width:'125px'}} alt="img" />
 	<div className="view-delete-heading">{process.env.REACT_APP_DELETE_RECORD_HEADING}</div>
   </div>
    <form onSubmit={DeleteRecord}>
@@ -3252,7 +3252,7 @@ async function ShowpopupEdit(getid)
   <div className="popupwait animate-zoom">
   <div className="text-center">
 	
-	<img src={loadergif} style={{width:'50px'}} alt="image" />
+	<img src={loadergif} style={{width:'50px'}} alt="img" />
 	</div>
   
     <div className="container-fluid padd_0" >
@@ -3274,7 +3274,7 @@ async function ShowpopupEdit(getid)
 	    <div id="popupsuccess" className="overlayadmin" style={{ display: `${popupsuccess === true ? 'block' : 'none'}` }}>
   <div className="popupdelete animate-zoom">
   <div className='text-center'>
-	<img  src={success} style={{width:'115px'}} alt="image" />
+	<img  src={success} style={{width:'115px'}} alt="img" />
   </div>
     <div className="view-success-heading text-center">{responseheading}</div>
     
@@ -3305,7 +3305,7 @@ async function ShowpopupEdit(getid)
 		<div id="popuperror" className="overlayadmin" style={{ display: `${popuperror === true ? 'block' : 'none'}` }}>
   <div className="popupdelete animate-zoom">
   <div className='text-center'>
-	<img  src={error} style={{width:'115px'}} alt="image" />
+	<img  src={error} style={{width:'115px'}} alt="img" />
   </div>
     <div className="view-error-heading text-center">{responseheading}</div>
     
@@ -3407,8 +3407,8 @@ async function ShowpopupEdit(getid)
 
 									<div className='downloadicncenter'>
 									<div style={{visibility:'hidden'}}>dd</div>
-										<span onClick={downloadPDF}><img title='Download PDF' src={pdf} className='excel' alt="image" /></span>
-										<span onClick={downloadCSV}><img title='Download CSV' src={csv} className='excel' alt="image" /></span>
+										<span onClick={downloadPDF}><img title='Download PDF' src={pdf} className='excel' alt="img" /></span>
+										<span onClick={downloadCSV}><img title='Download CSV' src={csv} className='excel' alt="img" /></span>
 										
 									</div>
 							</div>
@@ -3421,7 +3421,7 @@ async function ShowpopupEdit(getid)
 								 {
 										datatblloader ? 
 										<div className="text-center">
-												<img src={loadergif} style={{width:'50px'}} alt="image" /><br/>
+												<img src={loadergif} style={{width:'50px'}} alt="img" /><br/>
 												<span className="delete-heading">Please wait...</span>
 										</div>
 										:

@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
-import {Link, NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {Swiper,SwiperSlide} from 'swiper/react'
 import { useAuth } from "../store/auth";
 import { Navigation, Pagination, A11y,Autoplay } from './../../node_modules/swiper/modules';    //
 import './../../node_modules/swiper/swiper-bundle.min.css'     //
 
 import closebtn from './Images/closebtn.png'
-import grocery from './Images/grocery.png'
-import offer from './Images/offer.png'
-import desktop from './Images/desktop.png'
-import laptop from './Images/laptop.png'
-import toy from './Images/toy.png'
-import mobile from './Images/mobile.png'
-import fashion from './Images/fashion.png'
-import electronincs from './Images/electronincs.png'
-import furniture from './Images/furniture.png'
-import appliences from './Images/appliences.png'
-import beauty from './Images/beauty.png'
+//import grocery from './Images/grocery.png'
+//import offer from './Images/offer.png'
+//import desktop from './Images/desktop.png'
+//import laptop from './Images/laptop.png'
+//import toy from './Images/toy.png'
+//import mobile from './Images/mobile.png'
+//import fashion from './Images/fashion.png'
+//import electronincs from './Images/electronincs.png'
+//import furniture from './Images/furniture.png'
+//import appliences from './Images/appliences.png'
+//import beauty from './Images/beauty.png'
 import category from './Images/category.png'
-import footwear from './Images/footwear.png'
-import watch from './Images/watch.png'
+//import footwear from './Images/footwear.png'
+//import watch from './Images/watch.png'
 
 
 
@@ -28,7 +28,7 @@ export default function Categoryslider()
    var count = 0;
    const {authorizationToken, USERAPI} = useAuth(); 
    const[records,setRecords] = useState([]);
-   const[categoryid,setCategoryid] = useState('');
+   //const[categoryid,setCategoryid] = useState('');
    const[categoryname,setCategoryName] = useState('');
    const[subcategory,setSubcategory] = useState([]);
    const[getallsubcategory,setallsubcategory] = useState([]);
@@ -246,7 +246,7 @@ export default function Categoryslider()
                                              {
                                                 data.imagename.length > 0 ?
                                                 <img loading='lazy' title={data.categoryname}  src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} alt={data.categoryname} />
-                                                : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'50px'}} alt="image" />
+                                                : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'50px'}} alt="img" />
                                              }
                                              
                                              </div>
@@ -261,7 +261,7 @@ export default function Categoryslider()
                                              {
                                                 data.imagename.length > 0 ?
                                                 <img loading='lazy' title={data.categoryname}  src={`${process.env.REACT_APP_BACK_END_URL}/uploads/${data.imagename}`} alt={data.categoryname} />
-                                                : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'50px'}} alt="image" />
+                                                : <img src={`${process.env.REACT_APP_BACK_END_URL}/uploads/noimg.svg`} style={{width:'50px'}} alt="img" />
                                              }
                                        </div>
                                        <span>{data.categoryname} </span>

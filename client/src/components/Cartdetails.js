@@ -3,7 +3,7 @@ import Header from './Header'
 import { Link, useNavigate } from 'react-router-dom'
 import Footer from './Footer'
 import exclamation from "./../components/Images/exclamation.svg";
-import closebtn from './Images/closebtn.png'
+//import closebtn from './Images/closebtn.png'
 import loader from './Images/loader.png'
 import camera from './Images/camera.jpg'
 import checkout from './Images/checkout.png'
@@ -47,7 +47,7 @@ export default function Cartdetails()
 		<div className="row mt-2">
 			<div className="col">
             <div className='text-center'>
-                    <img src={exclamation} style={{width:'125px'}} alt="image"/>
+                    <img src={exclamation} style={{width:'125px'}} alt="img"/>
                     <div className="view-delete-heading-user">Remove Item ?</div>
                     <span className="remove-heading">Really want to remove this item ?</span>
                 </div>

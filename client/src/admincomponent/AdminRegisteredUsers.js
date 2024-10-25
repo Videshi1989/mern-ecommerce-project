@@ -964,7 +964,7 @@ function downloadCSV(args) {
 <div id="popupdelete" className="overlayadmin" style={{display:'none'}}>
   <div className="popupdelete animate-zoom">
   <div className='text-center'>
-	<img  src={exclamation} style={{width:'125px'}} alt="image" />
+	<img  src={exclamation} style={{width:'125px'}} alt="img" />
 	<div className="view-delete-heading">{process.env.REACT_APP_DELETE_RECORD_HEADING}</div>
   </div>
     
@@ -1003,7 +1003,7 @@ function downloadCSV(args) {
   <div className="popupwait animate-zoom">
     <div className="text-center">
 	
-	<img src={loadergif} style={{width:'50px'}} alt="image" />
+	<img src={loadergif} style={{width:'50px'}} alt="img" />
 	</div>
    
   
@@ -1026,7 +1026,7 @@ function downloadCSV(args) {
 	    <div id="popupsuccess" className="overlayadmin" style={{ display: `${popupsuccess === true ? 'block' : 'none'}` }}>
   <div className="popupdelete animate-zoom">
   <div className='text-center'>
-	<img  src={success} style={{width:'115px'}} alt="image" />
+	<img  src={success} style={{width:'115px'}} alt="img" />
   </div>
     <div className="view-success-heading text-center">{responseheading}</div>
     
@@ -1057,7 +1057,7 @@ function downloadCSV(args) {
 		<div id="popuperror" className="overlayadmin" style={{ display: `${popuperror === true ? 'block' : 'none'}` }}>
   <div className="popupdelete animate-zoom">
   <div className='text-center'>
-	<img  src={error} style={{width:'115px'}} alt="image" />
+	<img  src={error} style={{width:'115px'}} alt="img" />
   </div>
     <div className="view-error-heading text-center">{responseheading}</div>
     
@@ -1153,8 +1153,8 @@ function downloadCSV(args) {
 
 									<div className='downloadicncenter'>
 									<div style={{visibility:'hidden'}}>dd</div>
-										<span onClick={downloadPDF}><img title='Download PDF' src={pdf} className='excel' alt="image" /></span>
-										<span onClick={downloadCSV}><img title='Download CSV' src={csv} className='excel' alt="image" /></span>
+										<span onClick={downloadPDF}><img title='Download PDF' src={pdf} className='excel' alt="img" /></span>
+										<span onClick={downloadCSV}><img title='Download CSV' src={csv} className='excel' alt="img" /></span>
 										
 									</div>
 							</div>
@@ -1167,7 +1167,7 @@ function downloadCSV(args) {
 									{
 										datatblloader ? 
 										<div className="text-center">
-												<img src={loadergif} style={{width:'50px'}} alt="image" /><br/>
+												<img src={loadergif} style={{width:'50px'}} alt="img" /><br/>
 												<span className="delete-heading">Please wait...</span>
 										</div>
 										:

@@ -110,7 +110,7 @@ const AdminChangepassword = () => {
   <div className="popupwait animate-zoom">
     <div className="text-center">
 	
-	<img src={loadergif} style={{width:'50px'}} alt="image" />
+	<img src={loadergif} style={{width:'50px'}} alt="img" />
 	</div>
    
   
@@ -133,7 +133,7 @@ const AdminChangepassword = () => {
 	    <div id="popupsuccess" className="overlayadmin" style={{ display: `${popupsuccess === true ? 'block' : 'none'}` }}>
   <div className="popupdelete animate-zoom">
   <div className='text-center'>
-	<img  src={success} style={{width:'115px'}} alt="image" />
+	<img  src={success} style={{width:'115px'}} alt="img" />
   </div>
     <div className="view-success-heading text-center">{responseheading}</div>
     
@@ -164,7 +164,7 @@ const AdminChangepassword = () => {
 		<div id="popuperror" className="overlayadmin" style={{ display: `${popuperror === true ? 'block' : 'none'}` }}>
   <div className="popupdelete animate-zoom">
   <div className='text-center'>
-	<img  src={error} style={{width:'115px'}} alt="image" />
+	<img  src={error} style={{width:'115px'}} alt="img" />
   </div>
     <div className="view-error-heading text-center">{responseheading}</div>
     
@@ -267,7 +267,7 @@ const AdminChangepassword = () => {
 																		 {
 																			loader ? <button type="button" className="btn btn-success btn-update w-100"><span>Please wait... <i className="fa fa-spinner fa-pulse fa-3x fa-fw fa-lg loadersize" ></i></span></button>
 																			:
-																			<button type="submit" className="btn btn-success btn-update w-100">Update <img src={updateicon} style={{width:'22px'}} alt="image" /></button>
+																			<button type="submit" className="btn btn-success btn-update w-100">Update <img src={updateicon} style={{width:'22px'}} alt="img" /></button>
 																		 }
 																		 </div>	
 																		
